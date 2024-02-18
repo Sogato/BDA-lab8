@@ -10,12 +10,7 @@ from sklearn.tree import export_graphviz
 def transform_data(df):
     """Преобразование данных датафрейма."""
     df["Gender"] = df["Gender"].apply(lambda toLabel: 0 if toLabel == 'male' else 1)
-    mean_age = df["Age"].mean()
-    print('GOIDAAAAA!!!')
-    print(mean_age)
     df["Age"] = df["Age"].fillna(df["Age"].mean())
-
-
 
 
 # Загрузка и первоначальный анализ обучающего набора данных
